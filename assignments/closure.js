@@ -1,13 +1,25 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
-let global = (function () {
+// let global = (function () {
   
-  return function () {
-    return ("hello")}
-})();
+//   return function () {
+//     return ("hello")}
+// })();
 
-console.log (global());
+// console.log (global());
+
+
+
+
+function completeName (firstName, lastName) {
+  let nameSay = "My name is ";
+  function makeFullName () {
+  return nameSay + firstName  + " " +lastName;
+  }
+  return makeFullName ();
+  }
+console.log (completeName ("Taylor","Hunkler"));
 
 
 
