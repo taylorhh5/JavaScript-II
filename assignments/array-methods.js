@@ -69,13 +69,9 @@ console.log(fullName);
 let allCaps = runners.map(function(item) {
 
 return {
-    "id": item.id,
+    
     "first_name": item.first_name.toUpperCase(),
-    "last_name": item.last_name,
-    "email":item.email,
-    "shirt_size":item.shirt_size,
-    "company_name":item.company_name,
-    "donation":item.donation,
+    
 }
 });
 
@@ -94,9 +90,9 @@ console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
-let ticketPriceTotal = [runners.donation].reduce(function(accumulator,currentItem){
+let ticketPriceTotal = runners.reduce(function(accumulator,currentItem){
 
-return accumulator + currentItem;
+return accumulator + currentItem.donation;
       },0)
       
     
