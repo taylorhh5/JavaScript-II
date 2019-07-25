@@ -9,6 +9,8 @@
 
 // console.log (global());
 
+var variable1 = "hello 'blank"
+let variable2 = "hello 'blank"
 
 
 

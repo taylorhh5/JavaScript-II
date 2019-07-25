@@ -67,11 +67,8 @@ console.log(fullName);
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
 let allCaps = runners.map(function(item) {
-
 return {
-    
-    "first_name": item.first_name.toUpperCase(),
-    
+     "first_name": item.first_name.toUpperCase(),
 }
 });
 
@@ -102,8 +99,31 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1  Need to find eveyone who works for the company Skinix.
 
-// Problem 2
+let compName = runners.filter (function(item){
+    return item.company_name === "Skinix";
+});
+console.log(compName);
 
-// Problem 3
+
+
+// Problem 2  The companies want their names in all capital letters.
+let compCaps = runners.map(function(item) {
+    return {
+         "company_name": item.company_name.toUpperCase(),
+    }
+    });
+    console.log (compCaps)
+
+
+    // Problem 3 The judges want to hold a raffel for anyone who donated over $250. 
+
+
+ let raffel = runners.filter (function(item) {
+  
+    return item.donation >= 250;
+  });
+  console.log (raffel);
+  
+ 

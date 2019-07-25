@@ -24,6 +24,8 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 
 
+
+  
   
   // getLength passes the length of the array into the callback.
 
@@ -58,15 +60,31 @@ sumNums(5,5, function(sumNums) {
 });
 
 
-function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+
+
+  function multiplyNums(x, y, cb) {   // takes a callback and two numbers. callback (which is ) and multiplys two numbers together
  cb (x * y);
 }
 
-multiplyNums(5,5, function(multiplyNums) {
-  console.log(multiplyNums)
+multiplyNums(5,5, function(multiplyNums) {   //calls multiplyNums function, which takes 5 and 5 and callback (which is the multiplyNums function) 
+  console.log(multiplyNums)                   //returns multiplyNums
 });
 
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function multiplyTwoNums (num1, num2){ // takes two number and multiplys them together
+  return num1 * num2;
+}
+
+function calc (cb, x, y){  //takes a callback and two numbers. returns- callback (which is multiplyTwoNums function) and applies it to two numbers.
+  return cb (x, y)
+}
+console.log (calc (multiplyTwoNums, 10, 10));  // calls function calc, which calls multiplyTwoNums on 10 and 10
 
 
 
